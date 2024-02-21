@@ -1,0 +1,44 @@
+experiment_name: supContrastive
+model_name: Dino
+model_type: image # image_grounded, image, image_sam
+batch_size: 128
+data:
+  type: coco #faces
+  set:  coco #face_forensics Here add the other sets we are going to analyse. 
+  train_data_path: /home/wustl/Dummy/Wustl/Deepfake/MasterThesis/data/
+  test_data_path: /home/wustl/Dummy/Wustl/Deepfake/MasterThesis/data/
+  val_data_path: /home/wustl/Dummy/Wustl/Deepfake/MasterThesis/data/
+  
+num_epochs: 5
+learning_rate: 0.0005 #0.0005 
+warmup_ratio: 0
+logging_steps: 5
+max_steps: null
+num_workers: 32
+num_labels: 1536
+acc_grad_batch: 1
+fast_dev_run: false
+loss_type: SubConLoss # CrossEntropy, BCE, Contrastive, Triblet, FocusLoss,FocalLoss
+head_type: linear # 2layer,Focushead,1layer
+image_mean: [0.485, 0.456, 0.406]  # mean RGB values from ImageNet
+image_std: [0.229, 0.224, 0.225]  # std RGB values from ImageNet
+image_size: 224  # generally used in models like ResNet, adjust as per your model
+
+test: false
+hidden_size: 1024
+
+transform:
+  type: band_filter # 2dfft
+  band_width: 10
+  radius: 10
+  
+
+
+encoder:
+  type: DinoV2 # Clip, SamBackbone, DinoV2, OpenClip
+  checkpoint: #"/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/checkpoints/sam_vit_h_4b8939.pth"
+model:
+  checkpoint: #"/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/checkpoints/sam_vit_h_4b8939.pth"
+
+
+

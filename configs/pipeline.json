@@ -1,0 +1,28 @@
+{
+    "auto_detect": {
+        "config": "GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py",
+        "tag2text_checkpoint": "./Tag2Text/tag2text_swin_14m.pth",
+        "grounded_checkpoint": "/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/checkpoints/groundingdino_swint_ogc.pth",
+        "sam_checkpoint": "/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/checkpoints/sam_vit_h_4b8939.pth",
+        "video_directory": "/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/data/original_video/video_sham/*.mp4",
+        "output_dir": "/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/data/meta",
+        "box_threshold": 0.25,
+        "text_threshold": 0.2,
+        "iou_threshold": 0.5,
+        "device": "cuda"
+    },
+    "auto_remove": {
+        "coords_type": "click",
+        "point_labels": 1,
+        "dilate_kernel_size": 15,
+        "output_dir": "/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/data/edited_video/custom",
+        "sam_model_type": "vit_h",
+        "sam_ckpt": "/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/checkpoints/sam_vit_h_4b8939.pth",
+        "lama_config": "./lama/configs/prediction/default.yaml",
+        "lama_ckpt": "/path/to/lama_checkpoint.pth",
+        "tracker_ckpt": "vitb_384_mae_ce_32x4_ep300",
+        "vi_ckpt": "/home/wustl/Dummy/Wustl/Deepfake/MasterThesis/checkpoints/sttn.pth",
+        "mask_idx": 2,
+        "fps": 25
+    }
+}
