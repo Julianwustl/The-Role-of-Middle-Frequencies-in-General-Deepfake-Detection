@@ -10,13 +10,13 @@ This thesis investigates the effects of frequency manipulation on the embeddings
 ## Results
 
 <p float="left">
-  <img src="./images/line_dino_acc.png" alt="Alternate image text 1" width="400" />
-  <img src="./images/line_clip_acc.png" alt="Alternate image text 2" width="400" />
+  <img src="./images/line_dino_acc.png" alt="DINO" width="400" />
+  <img src="./images/line_clip_acc.png" alt="CLIP" width="400" />
 </p>
 
 <p float="left">
-  <img src="./images/dino_heat_acc.png" alt="Alternate image text 1" width="400" />
-  <img src="./images/clip_heat_acc.png" alt="Alternate image text 2" width="400" />
+  <img src="./images/dino_heat_acc.png" alt="DINO" width="400" />
+  <img src="./images/clip_heat_acc.png" alt="CLIP" width="400" />
 </p>
 
 
