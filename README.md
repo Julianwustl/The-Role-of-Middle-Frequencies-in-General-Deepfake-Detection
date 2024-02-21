@@ -9,7 +9,17 @@ This thesis investigates the effects of frequency manipulation on the embeddings
 
 ## Results
 
-![Alternate image text](https://github.com/Julianwustl/The-Role-of-Middle-Frequencies-in-General-Deepfake-Detection.git/images/dino_heat_acc.png)
+<p float="left">
+  <img src="./images/line_dino_acc.png" alt="Alternate image text 1" width="100" />
+  <img src="./images/line_clip_acc.png" alt="Alternate image text 2" width="100" />
+</p>
+
+<p float="left">
+  <img src="./images/dino_heat_acc.png" alt="Alternate image text 1" width="100" />
+  <img src="./images/clip_heat_acc.png" alt="Alternate image text 2" width="100" />
+</p>
+
+
 
 
 
