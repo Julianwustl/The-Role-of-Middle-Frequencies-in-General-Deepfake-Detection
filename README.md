@@ -7,6 +7,13 @@
 This thesis investigates the effects of frequency manipulation on the embeddings of Visual Foundation Models, specifically Clip and Dino, in the realm of deepfake detection. We designed a series of experiments to analyze how image encodings by various Generative Adversarial Networks  and Diffusion Models change when frequency information is altered. Our focus was on the dependency of these models on frequency artifacts, as highlighted in previous research. Our findings contrast with earlier studies, revealing that Clip is indeed influenced by frequency domain artifacts. While Clip performs adequately in the absence of these artifacts, their presence during training cannot always be guaranteed. We also discovered that DINO outperforms CLIP (by 10\% for PD@1) when trained exclusively on GAN's and tested on diffusion models, highlighting its superior performance in terms of generalization. Notably, DINO demonstrates remarkable resilience to low-pass filtering, only affected by intense filters, whereas CLIP shows a more gradual performance decline. We postulate that Dino's robustness is partly due to its student-teacher knowledge distillation training, which seems to foster a strong low-to-high frequency correspondence and stronger entropy in the lower frequency domain. 
 
 
+## Results
+
+![Alternate image text](https://github.com/Julianwustl/The-Role-of-Middle-Frequencies-in-General-Deepfake-Detection.git/images/dino_heat_acc.png)
+
+
+
+
 ### Installation
 
 Requires `python>=3.8`
