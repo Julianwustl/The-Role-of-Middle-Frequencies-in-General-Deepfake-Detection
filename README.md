@@ -69,15 +69,15 @@ Create lowpass filter with filter_radius increments of 5
 python3 core/fft.py -p ./data/example/000_frame0.png -e lowpass_butterworth -sp ./results/example_data -t lowpass_butterworth -r 5
 ```
 
-create a highpass
+Create a highpass
 ```bash
 python3 core/fft.py -p ./data/example/000_frame0.png -e highpass_butterwoth -sp ./results/example_data -t butterworth_highpass -r 5
 ```
-create a bandPass
+Create a bandPass
 ```bash
 python3 core/fft.py -p ./data/example/000_frame0.png  -tip 00000001.png -e butterworth_bandpass_filter_mask -sp ./results/example_data -t butterworth_bandpass -r 5
 ```
-create a FDA
+Create a FDA
 ```bash
 python3 core/fft.py -p 00000001.png   -e FDA -sp ./results/example_data -t FDA -r 5
 ```
@@ -119,15 +119,6 @@ python evaluation_fast.py -et DinoV2 -mc /home/wustl/Dummy/Wustl/Deepfake/Master
 python frequency_analysis.py /home/wustl/Dummy/Wustl/Deepfake/MasterThesis/data/lsun_bedroom/test /home/wustl/Dummy/Wustl/Deepfake/MasterThesis/results/data_paper/spectral fft_hp --img-dirs Real ProGAN StyleGAN ProjectedGAN Diff-StyleGAN2 Diff-ProjectedGAN --log --vmin 1e-5 --vmax 1e-1
 python frequency_analysis.py $WORKDIR/data/diffusion_model_deepfakes_lsun_bedroom/test $WORKDIR/output fft_hp --img-dirs Real DDPM IDDPM ADM PNDM LDM --log --vmin 1e-5 --vmax 1e-1
 ```
-Then we create the Analytics for MMD for comparing fake vs real
-```bash
-python feature_space_analysis/calculate_MMD.py -b ./results/embedding/ -m mmd -e fake_vs_real   -s 1000 -o ./results/ 
-
-```
-
-Then we create the Analytics for MMD comparing no filter vs filter. 
-```bash
-python feature_space_analysis/calculate_MMD.py -b ./results/embedding/ -m mmd -e no_filter_vs_filter   -s 1000 -o ./results/ 
 
 
 
